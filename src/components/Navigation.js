@@ -8,17 +8,29 @@ export default function Navigation(props) {
       ) : (
         <Link to="/">
           <img
-            src={require("../assets/nav-logo.png")}
+            src="/BRANDING/icons_assets/Logo.svg"
             alt="Little Lemon logo"
             className="nav-image"
           ></img>
         </Link>
       )}
       <Link className="hover-effect" to="/">
-        <h1>Home</h1>
+        <h3>Home</h3>
+      </Link>
+      <Link className="hover-effect" to="">
+        <h3>About</h3>
+      </Link>
+      <Link className="hover-effect" to="">
+        <h3>Menu</h3>
       </Link>
       <Link className="hover-effect" to="/reservations">
-        <h1>Reservations</h1>
+        <h3>Reservations</h3>
+      </Link>
+      <Link className="hover-effect" to="">
+        <h3>Order online</h3>
+      </Link>
+      <Link className="hover-effect" to="">
+        <h3>Login</h3>
       </Link>
     </menu>
   );

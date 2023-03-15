@@ -5,7 +5,7 @@ export default function Footer() {
       <menu>
         <li className="img-footer">
           <img
-            src={require("../assets/footer-logo.png")}
+            src="/BRANDING/icons_assets/Logo .svg"
             alt="Little Lemon logo"
           ></img>
         </li>
@@ -14,13 +14,13 @@ export default function Footer() {
           <ul className="footer-links">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-            <a
+            {/* <a
               href={require("../assets/menu.webp")}
               target="_blank"
               rel="noreferrer"
             >
               Menu
-            </a>
+            </a> */}
             <Link to="/reservations">Reservations</Link>
             <Link to="/order">Order</Link>
             <Link to="/login">Login</Link>

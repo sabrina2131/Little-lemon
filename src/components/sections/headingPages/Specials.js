@@ -7,19 +7,20 @@ export default function Specials() {
   return (
     <section className="specials">
       <article className="specials-topbar">
-        <h1>This weeks specials</h1>
-        <a
+        <h2>This weeks specials</h2>
+        {/* <a
           className="action-button"
           href={require("../../../assets/menu.webp")}
           target="_blank"
           rel="noreferrer"
         >
           Online Menu
-        </a>
+        </a> */}
       </article>
 
       <section className="specials-cards">
         <SpecialCard
+          className="specials-card"
           image={GreekSalad}
           name="Greek Salad"
           price="$12.99"
@@ -27,6 +28,7 @@ export default function Specials() {
                  Dressed with salt, hot pepper, and olive oil."
         />
         <SpecialCard
+          className="specials-card"
           image={Bruschetta}
           name="Bruschetta"
           price="$16.99"
@@ -34,6 +36,7 @@ export default function Specials() {
                  salt and olive oil."
         />
         <SpecialCard
+          className="specials-card"
           image={LemonDessert}
           name="Lemon Dessert"
           price="$8.50"
