@@ -1,13 +1,25 @@
+import { useFormik } from "formik";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { submitAPI } from "../../../bookingsAPI";
+import * as Yup from "yup";
+
+Yup.setLocale({
+  mixed: {
+    required: "Required Field",
+  },
+});
+
+const Schema = Yup.object({
+  fName: Yup.string().required(),
+  lName: Yup.string().required(),
+  email: Yup.string().email().required(),
+  tel: Yup.string().required(),
+});
+
 export default function ReservationForm(props) {
   const navigate = useNavigate();
 
-  const [fName, setFName] = useState("");
-  const [lName, setLName] = useState("");
-  const [email, setEmail] = useState("");
-  const [tel, setTel] = useState("");
   const [people, setPeople] = useState(1);
   const [date, setDate] = useState("");
   const [occasion, setOccasion] = useState("");
@@ -15,6 +27,15 @@ export default function ReservationForm(props) {
   const [comments, setComments] = useState("");
 
   const [time, setTime] = useState(props.availableTimes[0]);
+
+  const formik = useFormik({
+    initialValues: { fName: "", lName: "", email: "", tel: "" },
+    onSubmit(values, helper) {
+      console.log(values);
+      // helper.resetForm();
+    },
+    validationSchema: Schema,
+  });
 
   function handleDateChange(e) {
     setDate(e.target.value);
@@ -27,18 +48,18 @@ export default function ReservationForm(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    submitAPI({
-      fName,
-      lName,
-      email,
-      tel,
-      people,
-      date,
-      occasion,
-      preferences,
-      comments,
-      finalTime: time,
-    });
+    // submitAPI({
+    //   fName,
+    //   lName,
+    //   email,
+    //   tel,
+    //   people,
+    //   date,
+    //   occasion,
+    //   preferences,
+    //   comments,
+    //   finalTime: time,
+    // });
     navigate("/confirmation");
   }
 
@@ -49,13 +70,18 @@ export default function ReservationForm(props) {
         <input
           type="text"
           id="fName"
+          name="fName"
           placeholder="First Name"
           required
-          minLength={2}
           maxLength={50}
-          value={fName}
-          onChange={(e) => setFName(e.target.value)}
+          value={formik.values.fName}
+          onChange={formik.handleChange}
         ></input>
+        {formik.errors.lName ? (
+          <p style={{ color: "red" }}>{formik.errors.fName}</p>
+        ) : (
+          <></>
+        )}
       </div>
 
       <div>
@@ -63,12 +89,18 @@ export default function ReservationForm(props) {
         <input
           type="text"
           id="lName"
+          name="lName"
           placeholder="Last Name"
-          minLength={2}
+          required
           maxLength={50}
-          value={lName}
-          onChange={(e) => setLName(e.target.value)}
+          value={formik.values.lName}
+          onChange={formik.handleChange}
         ></input>
+        {formik.errors.lName ? (
+          <p style={{ color: "red" }}>{formik.errors.lName}</p>
+        ) : (
+          <></>
+        )}
       </div>
 
       <div>
@@ -77,12 +109,17 @@ export default function ReservationForm(props) {
           type="email"
           id="email"
           placeholder="Email"
-          value={email}
           required
           minLength={4}
           maxLength={200}
-          onChange={(e) => setEmail(e.target.value)}
+          value={formik.values.email}
+          onChange={formik.handleChange}
         ></input>
+        {formik.errors.email ? (
+          <p style={{ color: "red" }}>{formik.errors.email}</p>
+        ) : (
+          <></>
+        )}
       </div>
 
       <div>
@@ -91,12 +128,16 @@ export default function ReservationForm(props) {
           type="tel"
           id="phonenum"
           placeholder="(xxx)-xxx-xxxx"
-          value={tel}
+          value={formik.values.tel}
           required
-          minLength={10}
           maxLength={25}
-          onChange={(e) => setTel(e.target.value)}
+          onChange={formik.handleChange}
         ></input>
+        {formik.errors.tel ? (
+          <p style={{ color: "red" }}>{formik.errors.tel}</p>
+        ) : (
+          <></>
+        )}
       </div>
 
       <div>
@@ -182,7 +223,9 @@ export default function ReservationForm(props) {
             double-check your answer before submitting your reservation request.
           </p>
         </small>
-        <button className="special-button">Book Table</button>
+        <button aria-label="On Click" className="special-button">
+          Book Table
+        </button>
       </div>
     </form>
   );

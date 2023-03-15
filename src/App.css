@@ -40,6 +40,8 @@ body {
   justify-content: space-evenly;
   align-items: center;
   padding: 16px 16px;
+  margin: 0px 50px;
+  margin-top: 15px;
 }
 
 button {
@@ -61,12 +63,14 @@ Link:link {
 
 .action-button {
   background-color: #f4ce14;
-  padding: 10px 30px;
+  padding: 10px 10px;
   max-width: 150px;
   margin-bottom: 20px;
   border-radius: 8px;
   font-family: "Karla";
   text-align: center;
+  box-shadow: 0px 0px 4px 0px rgb(65, 65, 65);
+
 }
 
 .action-button:hover {
@@ -76,6 +80,8 @@ Link:link {
   border-width: 1px;
   border-color: #edefee;
   transition: 0.2s;
+    box-shadow: 0px 0px 4px 0px rgb(156, 156, 156);
+
 }
 
 
@@ -126,13 +132,17 @@ Link:link {
 
 .hero-text > h1 {
   font-size: 40px;
+  color: #f4ce14;
   margin: 0;
   margin-top: 25px;
+  letter-spacing: 2px;
 }
 
 .hero-text > h3 {
-  font-size: 32px;
+  font-size: 24px;
   margin: 0;
+  letter-spacing: 1px;
+
 }
 
 .hero-text {
@@ -177,6 +187,7 @@ Link:link {
 
 .specials-topbar > h2 {
   font-size: 32px;
+  color: #333333;
   text-align: center;
   margin-right: 1rem;
   margin-bottom: 1rem;
@@ -184,6 +195,7 @@ Link:link {
 
 .specials-cards {
   display: grid;
+  color: #333333;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   display: flex;
@@ -204,7 +216,7 @@ Link:link {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 6px 0px rgb(156, 156, 156);
   border-radius: 10px;
   min-height: 600px;
 
@@ -218,13 +230,16 @@ Link:link {
   height: 300px;
   object-fit: cover;
   border-radius: 10px 10px;
-  margin: auto;
+  margin: 50px 8px 16px 8px;
+  /* margin-top: 24px; */
+  /* margin-bottom: 16px; */
   text-align: center;
   /* border-radius: 10px; */
 }
 
 .menu-card-content {
-  margin: 0.5rem 2rem 1rem 2rem;
+  margin: 8px 16px 16px 16px;
+
 }
 
 .menu-card-content > h1 {
@@ -233,20 +248,35 @@ Link:link {
 }
 
 .menu-card-content > h3 {
-  font-size: 1.8rem;
+  font-size: 20px;
+  color: #EE9972;
   margin: 0;
   margin-top: 8px;
+}
+.menu-card-content > h2 {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+  margin-top: 8px;
+  /* margin-bottom: 8px; */
+}
+
+.special-button-container{
+  padding-top: 16px;
 }
 
 .special-button {
   background-color: #f4ce14;
-  padding: 10px 30px;
+  padding: 10px 20px;
   max-width: 150px;
+  margin-top: 30px;
   margin-bottom: 20px;
   border-radius: 8px;
   font-family: "Karla";
   text-align: center;
+  box-shadow: 0px 0px 4px 0px rgb(156, 156, 156);
 }
+
 
 .special-button:hover {
   background-color: #495e57;
@@ -323,6 +353,26 @@ Link:link {
   padding: 16px 16px 50px 16px;
 }
 
+.about-us-text{
+  color: #333;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 300px;
+
+}
+
+.about-us-text > h1{
+    font-size: 36px;
+    margin: 0;
+    margin-top: 25px;
+    letter-spacing: 2px;}
+
+    .about-us-text > h3{
+      font-size: 26px;
+      margin: 0;
+      /* margin-top: 25px; */
+      letter-spacing: 1px;}
 /* .about-subtext {
   margin-top: -1.5rem;
 } */
@@ -354,18 +404,25 @@ Link:link {
   max-width: 400px;
   max-height: 400px;
   overflow: hidden;
+  margin-bottom: 50px;
+
 }
 
 .about-1 {
   position: relative;
   top: 0;
   left: 0;
+  margin-bottom: 50px;
+  filter: brightness(80%);
 }
 
 .about-2 {
   position: absolute;
   top: -5.5rem;
   left: 5rem;
+  margin-top: 20px;
+  filter: brightness(80%);
+
 }
 
 /* FOOTER STYLING */
@@ -387,9 +444,10 @@ footer > menu {
   padding: 16px 16px;
 }
 
-.footer-header {
-  /* margin-bottom: -1.25rem; */
+menu > li {
+  list-style: none;
 }
+
 
 .footer-links {
   padding: 0;
@@ -421,6 +479,8 @@ footer > menu {
 
 .img-footer > img {
   background-color: white;
+  max-height: 200px;
+  filter: brightness(70%);
   /* max-height: 8rem;
   position: absolute;
   top: 50%;
@@ -441,12 +501,13 @@ footer > menu {
 
 .header-reserve {
   width: 100vw; /* width of container */
-  height: 20rem; /* height of container */
+  height: 25rem; /* height of container */
   object-fit: cover;
+  filter: brightness(30%);
 }
 
 .reserve-header-text {
-  background-color: #495e57;
+  /* background-color: #495e57; */
   padding: 0 3rem 0 3rem;
   position: absolute;
   top: 50%;
