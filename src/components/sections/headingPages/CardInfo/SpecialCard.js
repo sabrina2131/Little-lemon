@@ -7,9 +7,11 @@ export default function SpecialCard(props) {
         <h2>{props.name}</h2>
         <h3>{props.price}</h3>
         <p>{props.description}</p>
-        <Link className="special-button" to="/order">
-          Order for Delivery
-        </Link>
+        <div className="special-button-container">
+          <Link className="special-button" to="/order">
+            Order for Delivery
+          </Link>
+        </div>
       </section>
     </article>
   );

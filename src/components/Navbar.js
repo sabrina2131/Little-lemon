@@ -17,7 +17,11 @@ export default function Navbar() {
           className="nav-image"
         ></img>
 
-        <button className="burger-icon" onClick={handleToggle}>
+        <button
+          aria-label="On Click"
+          className="burger-icon"
+          onClick={handleToggle}
+        >
           <img src={navbarOpen ? Close : Hamburger} alt="Navigation Bar" />
         </button>
       </nav>

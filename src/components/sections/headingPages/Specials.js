@@ -1,6 +1,3 @@
-import Bruschetta from "../../../assets/food/bruschetta.jpeg";
-import GreekSalad from "../../../assets/food/greek-salad.webp";
-import LemonDessert from "../../../assets/food/lemon-dessert.webp";
 import SpecialCard from "./CardInfo/SpecialCard";
 
 export default function Specials() {
@@ -21,7 +18,7 @@ export default function Specials() {
       <section className="specials-cards">
         <SpecialCard
           className="specials-card"
-          image={GreekSalad}
+          image="/BRANDING/ICdLWb5gTE-m-IBTHUbNKA_1b4d05e13f71491396e9e67699bc82e1_C8.M1.L3.Item-3-Exercise-Wireframing-the-project-Wireframe/images/greeksalad.jpg"
           name="Greek Salad"
           price="$12.99"
           description="Refreshing salad, made with tomato, lettuce, feta cheese, and olives.
@@ -29,7 +26,7 @@ export default function Specials() {
         />
         <SpecialCard
           className="specials-card"
-          image={Bruschetta}
+          image="/BRANDING/icons_assets/bruschetta.jpg"
           name="Bruschetta"
           price="$16.99"
           description="Toasted bread, topped with tomato, prosciutto, and cheese. Seasoned with
@@ -37,7 +34,7 @@ export default function Specials() {
         />
         <SpecialCard
           className="specials-card"
-          image={LemonDessert}
+          image="/BRANDING/icons_assets/lemon dessert.jpg"
           name="Lemon Dessert"
           price="$8.50"
           description="Fresh baked lemon bread coated in salt and sugar. Powdered in citrus

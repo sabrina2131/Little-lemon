@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer>
-      <li className="img-footer">
-        <img
-          src="/BRANDING/icons_assets/Logo .svg"
-          alt="Little Lemon logo"
-        ></img>
-      </li>
       <menu>
+        <li className="img-footer">
+          <img
+            src="/BRANDING/icons_assets/Mario and Adrian A.jpg"
+            alt="Little Lemon logo"
+          ></img>
+        </li>
         <li className="contact">
-          <h1 className="footer-header">Navigation</h1>
+          <h3 className="footer-header">Navigation</h3>
           <ul className="footer-links">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
@@ -28,8 +28,8 @@ export default function Footer() {
         </li>
 
         <li>
-          <h1 className="footer-header">Contact</h1>
-          <ul className="footer-links">
+          <h3 className="footer-header">Contact</h3>
+          <ul className="footer-links" style={{ lineHeight: "16px" }}>
             <li>2395 Maldove Way,</li>
             <li>Chicago Illinois</li>
             <br></br>
@@ -45,7 +45,7 @@ export default function Footer() {
           </ul>
         </li>
         <li>
-          <h1 className="footer-header">Connect</h1>
+          <h3 className="footer-header">Connect</h3>
           <ul className="footer-links">
             <a
               href="https://www.facebook.com/thelittlelemonshop/"

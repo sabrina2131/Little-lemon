@@ -4,7 +4,7 @@ export default function Heading() {
     <header className="reserve-table" style={{ paddingTop: "50px" }}>
       <img
         className="header-reserve"
-        src={HeroImage}
+        src="/BRANDING/icons_assets/restaurant.jpg"
         alt="Little Lemon Ingredients"
       ></img>
       <div className="reserve-header-text">
