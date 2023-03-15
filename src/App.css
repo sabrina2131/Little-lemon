@@ -61,10 +61,12 @@ Link:link {
 
 .action-button {
   background-color: #f4ce14;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 10px 30px;
+  max-width: 150px;
+  margin-bottom: 20px;
   border-radius: 8px;
   font-family: "Karla";
-  /* font-size: 2rem; */
+  text-align: center;
 }
 
 .action-button:hover {
@@ -76,9 +78,7 @@ Link:link {
   transition: 0.2s;
 }
 
-.subsection {
-  margin-top: -2rem;
-}
+
 
 /* NAVBAR STYLING */
 /* .navbar-menu {
@@ -124,11 +124,16 @@ Link:link {
 }
 
 
-/* .hero-text > h1 {
+.hero-text > h1 {
   font-size: 40px;
-  margin-top: 0rem;
-  margin-bottom: -3rem;
-} */
+  margin: 0;
+  margin-top: 25px;
+}
+
+.hero-text > h3 {
+  font-size: 32px;
+  margin: 0;
+}
 
 .hero-text {
   display: flex;
@@ -144,8 +149,8 @@ Link:link {
     align-items: center;
     align-content: space-between;
     border-radius: 8px;
-    max-width: 350px;
-    max-height: 350px;
+    max-width: 400px;
+    max-height: 400px;
     overflow: hidden;
   }
 
@@ -155,6 +160,7 @@ Link:link {
   height: 100%;
   object-fit: cover;
 }
+
 
 /* SPECIALS */
 .specials {
@@ -169,46 +175,52 @@ Link:link {
   margin-bottom: 2rem;
 }
 
-.specials-topbar > h1 {
-  font-size: 2.5rem;
+.specials-topbar > h2 {
+  font-size: 32px;
+  text-align: center;
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
 
 .specials-cards {
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2vw; */
+  grid-gap: 20px;
   display: flex;
-  align-content: space-around;
-  justify-content: center;
   align-items: center;
-  margin: 15px
+  justify-content: center;
+  margin: 15px;
 }
 
-.specials-card{
-  display: flex;
-  align-content: space-around;
-  justify-content: center;
-  align-items: center;
-  margin: 15px
-}
+
 
 .menu-card {
-  background-color: #edefee;
+  /* background-color: #edefee; */
+  max-width: 350px;
   padding-bottom: 1rem;
+  /* padding-top: 1rem; */
+  /* background-color: #efefef; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+  border-radius: 10px;
+  min-height: 600px;
+
 }
 
 .menu-card > img {
   /* height: 25vh;
-  width: 100%;
-  object-fit: cover; */
+  width: 100%; */
+  object-fit: cover;
   width: 300px;
   height: 300px;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px;
   margin: auto;
   text-align: center;
+  /* border-radius: 10px; */
 }
 
 .menu-card-content {
@@ -223,6 +235,7 @@ Link:link {
 .menu-card-content > h3 {
   font-size: 1.8rem;
   margin: 0;
+  margin-top: 8px;
 }
 
 .special-button {
@@ -253,9 +266,9 @@ Link:link {
   animation-name: slideDownFade;
 }
 
-.testimonials-topbar > h1 {
+.testimonials-topbar > h2 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 32px;
   margin: 4rem 0 1rem 0;
 }
 
@@ -265,11 +278,16 @@ Link:link {
   grid-template-rows: 1fr;
   grid-gap: 2vw;
   align-items: center;
+
 }
 
 .testimonial-card {
   background-color: #edefee;
   padding: 1rem 1rem 0 1rem;
+  min-height: 350px; 
+  border-radius: 8px;
+
+
 }
 
 .testimonial-card > img {

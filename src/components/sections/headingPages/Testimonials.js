@@ -4,7 +4,7 @@ export default function Testimonials() {
   return (
     <section className="testimonials">
       <article className="testimonials-topbar">
-        <h1>Testimonials</h1>
+        <h2>Testimonials</h2>
       </article>
 
       <section className="testimonials-cards">
